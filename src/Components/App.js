@@ -1,41 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, Routes, Route } from 'react-router-dom';
-import Content from './Content';
+import Home from './Home';
+import Admin from './Admin';
+import About from './About';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
+import Footer from './Footer';
 
 
 
 
 const App = () => {
-    const [content, setContent] = useState([]);
-
-    useEffect(()=>{
-        const fetchContent = async()=>{
-            const response = await axios.get('/api/content');
-            setContent(response.data);
-        };
-        fetchContent();
-    }, []);
 
     return (
         <div>
-            <h1><Link to='/'>Personal Site (under construction) ({content.length})</Link></h1>
-            <ul>
-                {
-                    content.map( item => {
-                        return (
-                            <li key={item.id}>
-                                <Link to={`/content/${item.id}`}>
-                                    {item.title}
-                                </Link>
-                            </li>
-                        );
-                    })
-                }
-            </ul>
+            <nav className='navBar'>
+                <Link to='/'><img className='logo' src={"https://s.yimg.com/wm/mbr/images/default-profile_192_v0.0.1.png"}/></Link>
+                <Link to='/admin'>Admin</Link>
+                <Link to='/about'>About Me</Link>
+                <Link to='/skills'>Skills</Link>
+                <Link to='/projects'>Projects</Link>
+                <Link to='/contact'>Contact</Link>
+            </nav>
+            <h1>Personal Site (under construction)</h1>
             <Routes>
-                <Route path='/content/:id' element={ <Content content={ content }/>} />
+                <Route path='/' element={ <Home /> }/>
+                <Route path='/admin' element={ <Admin /> }/>
+                <Route path='/about' element={ <About /> }/>
+                <Route path='/skills' element={ <Skills /> }/>
+                <Route path='/projects' element={ <Projects /> }/>
+                <Route path='/contact' element={ <Contact /> }/>
             </Routes>
+            <Footer />
         </div>
     );
 };
