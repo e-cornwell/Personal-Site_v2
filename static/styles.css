@@ -1,3 +1,10 @@
 * {
     font-family: fantasy;
 }
+
+.navBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: cornflowerblue;
+}
