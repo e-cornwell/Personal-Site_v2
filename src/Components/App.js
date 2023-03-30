@@ -15,7 +15,7 @@ import Footer from './Footer';
 const App = () => {
 
     return (
-        <div>
+        <div className='main'>
             <nav className='navBar'>
                 <Link to='/'><img className='logo' src={"https://s.yimg.com/wm/mbr/images/default-profile_192_v0.0.1.png"}/></Link>
                 <Link to='/admin'>Admin</Link>
