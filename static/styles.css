@@ -2,16 +2,16 @@
     font-family: fantasy;
 }
 
-.main {
-    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg);
+body {
+    background-image: url(
+        https://scontent-den4-1.xx.fbcdn.net/v/t31.18172-8/328104_3070145028488_182269843_o.jpg?_nc_cat=100&ccb=1-7&_nc_sid=2c4854&_nc_ohc=LUdrOYw8ve8AX96FPGL&_nc_ht=scontent-den4-1.xx&oh=00_AfCT1tcJxY2ss-lPQ8zQkil_27I2vP1Bs2PH23kwmdq2uw&oe=644D3BCC
+    );
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 900px;
+    margin: none;
 }
 
 .navBar {
     display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    background-color: rgba(102, 107, 117, 0.187);
+    justify-content:space-between;
 }
